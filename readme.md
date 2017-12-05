@@ -34,3 +34,23 @@ Another learning is, the way of dealing with the icons (and that many elements a
 It was very useful to have a pre-existing list of names for all the icons [here](https://oblador.github.io/react-native-vector-icons/). The list is gigantic, some icon sets have around 2000+ icons. If you are interested in downloading the typescript list, check the [icons folder](./src/icons/) with all the definitions (Thankfully, I had vim to edit quickly all of it).
 
 Finally (and the most important point for me), learnt how to link new dependencies in `react-native`. Originally, I was afraid the process was going to be complicated and had to tweak many things in xcode/android studio, but in reality was pretty straight forward... For instance, `react-native-vector-icons` seems to be compatible with the command `react-natve link`, that goes through all your dependencies and links it to your xcode/android studio project as necessary. I manually did the process on the xcode project without know how awesome this little tool is.
+
+## How to run this code?
+
+```sh
+# Cloning the repo to 'tabnav'
+git clone git@github.com:rodrigoelp/reactnative-typescript-exercise-12.git tabnav
+# Changing directory
+cd tabnav
+# Installing dependencies
+yarn # if you have not installed yarn, then change it to: npm install
+# Compiling the typescript code
+./node_modules/.bin/tsc
+# Launching the react-native development server
+open -a Terminal "`react-native start`"
+# Compiling the code for ios and deploying it to the simulator
+react-native run-ios # optionally, type: react-native run-android
+# Alternatively, you could comment the line above and run the two lines below.
+# open -a Terminal "`react-native run-ios`"
+# open -a Terminal "`react-native run-android`"
+```
